@@ -17,14 +17,19 @@ loaders.forEach(v => {
 })
 
 var plugins = [
-  new webpack.optimize.UglifyJsPlugin({
-    compress: {
-      warnings: false,
-    },
-    output: {
-      comments: false,
-    },
-  }),
+
+  // // minify js
+  // new webpack.optimize.UglifyJsPlugin({
+  //   compress: {
+  //     warnings: false,
+  //   },
+  //   output: {
+  //     comments: false,
+  //   },
+  // }),
+
+  // common chunk
+  new webpack.optimize.CommonsChunkPlugin("common.js"),
 ]
 
 var config = {
@@ -39,7 +44,7 @@ var config = {
   module: {
     loaders: loaders
   },
-  // plugins: plugins
+  plugins: plugins
 }
 module.exports = config
 

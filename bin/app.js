@@ -1,46 +1,4 @@
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId])
-/******/ 			return installedModules[moduleId].exports;
-
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			exports: {},
-/******/ 			id: moduleId,
-/******/ 			loaded: false
-/******/ 		};
-
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-
-/******/ 		// Flag the module as loaded
-/******/ 		module.loaded = true;
-
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-
-
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
-
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(0);
-/******/ })
-/************************************************************************/
-/******/ ([
+webpackJsonp([1,3],[
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -51,18 +9,15 @@
 
 	console.log(css);
 
-	var cats = __webpack_require__(8);
-	console.log(cats);
-
 	document.onclick = function (e) {
 	  // click to load style, then unload style
 	  if (!css.n) css.n = css.use();else css.n = css.unuse();
 
 	  // thunk name default 1.app.js, ondemand loading
-	  // require.ensure('./cats', function(require) {
-	  //   const cats = require('./cats')
-	  //   console.log(cats)
-	  // })
+	  __webpack_require__.e/* nsure */(2, function (require) {
+	    var cats = __webpack_require__(8);
+	    console.log(cats);
+	  });
 	};
 
 	window.onload = function (arg) {
@@ -483,15 +438,5 @@
 
 	module.exports = __webpack_require__.p + "5e693f3b7e3798d2e3f628b1e9d48866.png";
 
-/***/ },
-/* 8 */
-/***/ function(module, exports) {
-
-	"use strict";
-
-	var cats = [2, 3, 4, 54];
-
-	module.exports = cats;
-
 /***/ }
-/******/ ]);
+]);
