@@ -73,7 +73,7 @@ webpackJsonp([1,3],[
 
 
 	// module
-	exports.push([module.id, "body{\r\n    font-size: 12px;\r\n    color: green!important;\r\n}\r\n\r\n._1GxfTNOck1aZSnn0vP3Qpj{\r\n    color:blue;\r\n}\r\n", ""]);
+	exports.push([module.id, "body{\n    font-size: 12px;\n    color: green!important;\n}\n\n._1GxfTNOck1aZSnn0vP3Qpj{\n    color:blue;\n}\n", ""]);
 
 	// exports
 	exports.locals = {
@@ -390,53 +390,10 @@ webpackJsonp([1,3],[
 
 /***/ },
 /* 5 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(6);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(4)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../node_modules/css-loader/index.js?modules!./../node_modules/stylus-loader/index.js!./test.styl", function() {
-				var newContent = require("!!./../node_modules/css-loader/index.js?modules!./../node_modules/stylus-loader/index.js!./test.styl");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 6 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(3)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "body {\n  background-color: #fff;\n  color: #00f;\n  font-size: 12px;\n  color: #00f;\n  color: rgba(111,18,60,0.8);\n  color: #f00;\n}\nh1 {\n  font-variant-caps: small-caps;\n  font-variant-numeric: lining-nums;\n}\n._2gm9GtT8DBoeVI244uViAf {\n  color: #00f;\n}\n.flex {\n  display: flex;\n}\n._1tDhJwAtJvnFFd1dx20OTM {\n  background: url(" + __webpack_require__(7) + ") no-repeat;\n}\n._2UEHGZEdKJd1BGtBNyGx_i {\n  size: 80px;\n  border-radius: 50%;\n}\n", ""]);
-
-	// exports
-	exports.locals = {
-		"localAbc": "_2gm9GtT8DBoeVI244uViAf",
-		"abc": "_1tDhJwAtJvnFFd1dx20OTM",
-		"avatar": "_2UEHGZEdKJd1BGtBNyGx_i"
-	};
-
-/***/ },
-/* 7 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "5e693f3b7e3798d2e3f628b1e9d48866.png";
+	// removed by extract-text-webpack-plugin
+	module.exports = {"localAbc":"_2gm9GtT8DBoeVI244uViAf"};
 
 /***/ }
 ]);

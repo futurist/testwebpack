@@ -3,11 +3,15 @@
 // cnpm install -g webpack webpack-dev-server
 
 var webpack = require('webpack')
+var poststylus = require('poststylus')
+var pie = require('postcss-pie')
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 var loaders = [
   {test: /\.js$/, loader: 'babel', query: {presets: ['es2015']}},
-  {test: /\.styl$/, loader: 'style!css?modules!stylus'},
   {test: /\.css$/, loader: 'style/useable!css'},
+  // {test: /\.styl$/, loader: 'css?modules!stylus'},
+  {test: /\.styl$/, loader: ExtractTextPlugin.extract('style', 'css!stylus')},
   {test: /\.html$/, loader: 'file?name=[name].[ext]'},
   {test: /\.png$|\.jpe*g$|\.gif$/, loader: 'file?name=[hash].[ext]'},
 ]
@@ -29,7 +33,9 @@ var plugins = [
   // }),
 
   // common chunk
-  new webpack.optimize.CommonsChunkPlugin("common.js"),
+  new webpack.optimize.CommonsChunkPlugin('common.js'),
+  new ExtractTextPlugin('app.css'),
+  // extractCSS, extractStylus
 ]
 
 var config = {
@@ -44,7 +50,14 @@ var config = {
   module: {
     loaders: loaders
   },
-  plugins: plugins
+  stylus: {
+    use: [poststylus(['autoprefixer', 'postcss-short', 'postcss-sorting', 'postcss-cssnext', 'rucksack-css',
+                      pie({
+                        htcPath: '/pie/PIE.htc'
+                      })])]
+  },
+  plugins: plugins,
+  watch: true
 }
 module.exports = config
 

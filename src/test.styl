@@ -1,9 +1,14 @@
+:root
+  --fontSize: 1rem;
+  --mainColor: #123456;
+  --highlightColor: hwb(190, 35%, 20%);
+
 body
   background-color white
   color blue
-  font-size 12px
-  color blue
-  color rgba(#6f123c, 0.8)
+  font-size var(--fontSize)
+  color rgba(0,0,0,0.5)
+  color var(--mainColor)
   color red
 
 h1
@@ -18,7 +23,12 @@ h1
 
 .abc
   background url(./images/image.png) no-repeat
+  border-radius 5px
+  width 100px
+  height 100px
+  border 1px solid blue
+  background: linear-gradient(63deg, #999 23%, transparent 23%) 7px 0, linear-gradient(63deg, transparent 74%, #999 78%), linear-gradient(63deg, transparent 34%, #999 38%, #999 58%, transparent 62%), #444;
+  background-size: 16px 48px;
 
 .avatar
   size 80px
-  border-radius 50%

@@ -1,0 +1,42 @@
+body {
+  background-color: #fff;
+  color: #00f;
+  color: rgba(0,0,0,0.5);
+  color: #123456;
+  color: #f00;
+  font-size: 16px;
+  font-size: 1rem;
+}
+h1 {
+  -webkit-font-feature-settings: "c2sc", "lnum";
+          font-feature-settings: "c2sc", "lnum";
+  font-variant-caps: small-caps;
+  font-variant-numeric: lining-nums;
+}
+._2gm9GtT8DBoeVI244uViAf {
+  color: #00f;
+}
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.abc {
+  behavior: url("/pie/PIE.htc");
+  width: 100px;
+  height: 100px;
+  position: relative;
+  zoom:1;
+  border: 1px solid #00f;
+  border-radius: 5px;
+  background: url(5e693f3b7e3798d2e3f628b1e9d48866.png) no-repeat;
+  -pie-background: -webkit-linear-gradient(27deg, #999 23%, transparent 23%) 7px 0, -webkit-linear-gradient(27deg, transparent 74%, #999 78%), -webkit-linear-gradient(27deg, transparent 34%, #999 38%, #999 58%, transparent 62%), #444;
+  background: -webkit-linear-gradient(27deg, #999 23%, transparent 23%) 7px 0, -webkit-linear-gradient(27deg, transparent 74%, #999 78%), -webkit-linear-gradient(27deg, transparent 34%, #999 38%, #999 58%, transparent 62%), #444;
+  -pie-background: linear-gradient(63deg, #999 23%, transparent 23%) 7px 0, linear-gradient(63deg, transparent 74%, #999 78%), linear-gradient(63deg, transparent 34%, #999 38%, #999 58%, transparent 62%), #444;
+  background: linear-gradient(63deg, #999 23%, transparent 23%) 7px 0, linear-gradient(63deg, transparent 74%, #999 78%), linear-gradient(63deg, transparent 34%, #999 38%, #999 58%, transparent 62%), #444;
+  background-size: 16px 48px;
+}
+.avatar {
+  width: 80px;
+  height: 80px;
+}
