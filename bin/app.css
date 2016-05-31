@@ -18,15 +18,12 @@ h1 {
 }
 .flex {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 .abc {
   behavior: url("/pie/PIE.htc");
   width: 100px;
   height: 100px;
-  position: relative;
-  zoom:1;
   border: 1px solid #00f;
   border-radius: 5px;
   background: url(5e693f3b7e3798d2e3f628b1e9d48866.png) no-repeat;

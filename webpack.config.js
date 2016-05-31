@@ -10,8 +10,8 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var loaders = [
   {test: /\.js$/, loader: 'babel', query: {presets: ['es2015']}},
   {test: /\.css$/, loader: 'style/useable!css'},
-  // {test: /\.styl$/, loader: 'css?modules!stylus'},
-  {test: /\.styl$/, loader: ExtractTextPlugin.extract('style', 'css!stylus')},
+  {test: /\.styl$/, loader: 'css?modules!stylus'},
+  // {test: /\.styl$/, loader: ExtractTextPlugin.extract('style', 'css?sourceMap!stylus')},
   {test: /\.html$/, loader: 'file?name=[name].[ext]'},
   {test: /\.png$|\.jpe*g$|\.gif$/, loader: 'file?name=[hash].[ext]'},
 ]
